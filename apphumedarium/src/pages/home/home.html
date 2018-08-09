@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>HUMEDARIUM</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Bienvenido {{userDetails.name}}</h2>
+  <h3>{{userDetails.email}}</h3>
+  <ion-list >
+    <ion-item *ngFor="let image of images">
+      <div class="img-content" item-left>
+        <img src="http://localhost:3000/{{image.picture.medium.url}}" class="img-thump">
+      </div>
+      <h2 class="description-image">{{ image.description }}</h2>
+      <p>{{ image.created_at | date:'M/d/yyyy HH:mm:ss' }}</p>
+      <button ion-button clear item-end (click)="goImage(image.picture.medium.url, image.description,  image.created_at );">
+Ver +</button>
+ 	  </ion-item>
+</ion-list>
+
+<div class="box_mona">
+  <div class="mona">
+      <img src="/assets/imgs/animal.png" alt="">
+  </div>
+  <div class="info_mona">
+    <div class="ubicacion"><img class="ubicacion_bicho" src="/assets/imgs/ubicacion_icon.png" alt=""></div>
+    <h1 class="nombre_bicho">PATO</h1>
+    <p class="taxonomia">Anas platyrhynchos</p>
+  </div>
+  <div class="text_mona">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel </p>
+  </div>
+</div>
+
+
+</ion-content>

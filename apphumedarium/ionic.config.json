@@ -1,0 +1,7 @@
+{
+  "name": "apptales",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
