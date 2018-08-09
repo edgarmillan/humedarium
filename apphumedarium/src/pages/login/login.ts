@@ -52,7 +52,7 @@ export class LoginPage {
 
   ionViewWillEnter () { 
     this.menu.enable (false); 
-} 
+  }  
 
 
 

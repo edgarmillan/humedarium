@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, MenuController, Platform, Nav, AlertController } from 'ionic-angular';
 import { ImagesProvider } from '../../providers/images/images'
 import { ImageInfoPage } from '../../pages/image-info/image-info'
+import { MapPage } from '../../pages/map/map'
 
 
 @Component({
@@ -29,6 +30,11 @@ export class HomePage {
     this.getImagesHome();
     
   }
+
+  ionViewWillEnter () { 
+    this.menu.enable (true); 
+  }
+
   getImagesHome(){
       this.imagesProvider.getImage(this.userDetails.auth_token).then((result) => {
       this.respounce = result;
@@ -45,6 +51,10 @@ export class HomePage {
       info:imgDescription,
       fecha: imgDate
     });
+  }
+
+  goToMap(){
+    this.navCtrl.push(MapPage)
   }
 
 }

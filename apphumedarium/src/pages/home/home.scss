@@ -1,4 +1,10 @@
 page-home {
+
+    ion-navbar[hidebackbutton] button[menutoggle]{
+        display: block !important;
+    }
+
+    background-color: antiquewhite;
 }
 
 .box_mona{
@@ -44,4 +50,15 @@ page-home {
 .ubicacion{
     float: left;
     width: 100%;        
+}
+
+.boton_location{
+    background-color: transparent;    
+    float: right;    
+}
+
+.info_user{
+    float: right;
+    color: green;   
+    width: 100%;     
 }
